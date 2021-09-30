@@ -1,0 +1,48 @@
+@tailwind base;
+
+@layer base {
+    body {
+        @apply bg-discord-bg-secondary;
+        @apply text-white;
+    }
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    h3 {
+      @apply text-lg;
+    }
+    a {
+      @apply text-discord-blurple;
+    }
+
+    a:hover {
+      @apply underline;
+    }
+  }  
+
+@tailwind components;
+@tailwind utilities;
+
+.reply-line:before {
+    content: "";
+    display: block;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    top: 50%;
+    right: 100%;
+    bottom: 0;
+    left: calc(-1*(40px/2 + 16px));
+    margin-right: var(--reply-spacing);
+    margin-top: calc(-1*2px/2);
+    margin-left: calc(-1*2px/2);
+    margin-bottom: calc(.125rem - 4px);
+    border-left: 2px solid white;
+    border-bottom: 0 solid white;
+    border-right: 0 solid white;
+    border-top: 2px solid white;
+    border-top-left-radius: 6px;
+}
